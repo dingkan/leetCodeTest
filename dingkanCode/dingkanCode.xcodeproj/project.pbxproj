@@ -7,17 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D640E4E8244E82FB00EA234E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D640E4E7244E82FB00EA234E /* Person.m */; };
+		D647123B24554E6C0000BC22 /* DKTimeProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D647123A24554E6C0000BC22 /* DKTimeProxy.m */; };
+		D647123E24554ED20000BC22 /* NSTimer+DKCrashHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D647123D24554ED20000BC22 /* NSTimer+DKCrashHandler.m */; };
+		D650B41B2452D4970000C79F /* NSObject+DKCrashHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B4062452D4970000C79F /* NSObject+DKCrashHandler.m */; };
+		D650B41C2452D4970000C79F /* DKKVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B4092452D4970000C79F /* DKKVOProxy.m */; };
+		D650B41D2452D4970000C79F /* NSObject+KVCCrashHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B40B2452D4970000C79F /* NSObject+KVCCrashHandler.m */; };
+		D650B41E2452D4970000C79F /* NSArray+DKCrashHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B40E2452D4970000C79F /* NSArray+DKCrashHandler.m */; };
+		D650B41F2452D4970000C79F /* NSMethodSignature+CrashHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B4122452D4970000C79F /* NSMethodSignature+CrashHandler.m */; };
+		D650B4202452D4970000C79F /* DKRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B4132452D4970000C79F /* DKRuntime.m */; };
+		D650B4212452D4970000C79F /* DKCrashObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B4162452D4970000C79F /* DKCrashObject.m */; };
+		D650B4222452D4970000C79F /* NSObject+KVOCrashHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B41A2452D4970000C79F /* NSObject+KVOCrashHandler.m */; };
+		D650B4262452D4E70000C79F /* NSNotificationCenter+DKCrashHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B4252452D4E70000C79F /* NSNotificationCenter+DKCrashHandler.m */; };
+		D650B4292452D5470000C79F /* DKNotificationRemover.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B4282452D5470000C79F /* DKNotificationRemover.m */; };
+		D650B42C2452D8D60000C79F /* tesmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D650B42B2452D8D60000C79F /* tesmVC.m */; };
+		D650FCE2245135BB00848EA7 /* KVOCrashObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D650FCE1245135BB00848EA7 /* KVOCrashObject.m */; };
 		D68E54022431E2BD00630B27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D68E54012431E2BD00630B27 /* AppDelegate.m */; };
 		D68E54052431E2BD00630B27 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D68E54042431E2BD00630B27 /* SceneDelegate.m */; };
 		D68E54082431E2BD00630B27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68E54072431E2BD00630B27 /* ViewController.m */; };
 		D68E540B2431E2BD00630B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68E54092431E2BD00630B27 /* Main.storyboard */; };
-		D68E540E2431E2BD00630B27 /* dingkanCode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D68E540C2431E2BD00630B27 /* dingkanCode.xcdatamodeld */; };
 		D68E54102431E2BE00630B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68E540F2431E2BE00630B27 /* Assets.xcassets */; };
 		D68E54132431E2BE00630B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68E54112431E2BE00630B27 /* LaunchScreen.storyboard */; };
 		D68E54162431E2BE00630B27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D68E54152431E2BE00630B27 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D640E4E6244E82FB00EA234E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D640E4E7244E82FB00EA234E /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		D647123924554E6C0000BC22 /* DKTimeProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTimeProxy.h; sourceTree = "<group>"; };
+		D647123A24554E6C0000BC22 /* DKTimeProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTimeProxy.m; sourceTree = "<group>"; };
+		D647123C24554ED20000BC22 /* NSTimer+DKCrashHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+DKCrashHandler.h"; sourceTree = "<group>"; };
+		D647123D24554ED20000BC22 /* NSTimer+DKCrashHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+DKCrashHandler.m"; sourceTree = "<group>"; };
+		D650B4062452D4970000C79F /* NSObject+DKCrashHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DKCrashHandler.m"; sourceTree = "<group>"; };
+		D650B4072452D4970000C79F /* NSObject+DKCrashHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DKCrashHandler.h"; sourceTree = "<group>"; };
+		D650B4092452D4970000C79F /* DKKVOProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKKVOProxy.m; sourceTree = "<group>"; };
+		D650B40A2452D4970000C79F /* DKKVOProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKKVOProxy.h; sourceTree = "<group>"; };
+		D650B40B2452D4970000C79F /* NSObject+KVCCrashHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KVCCrashHandler.m"; path = "../KVO/NSObject+KVCCrashHandler.m"; sourceTree = "<group>"; };
+		D650B40C2452D4970000C79F /* NSObject+KVOCrashHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOCrashHandler.h"; sourceTree = "<group>"; };
+		D650B40E2452D4970000C79F /* NSArray+DKCrashHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DKCrashHandler.m"; sourceTree = "<group>"; };
+		D650B40F2452D4970000C79F /* NSArray+DKCrashHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DKCrashHandler.h"; sourceTree = "<group>"; };
+		D650B4112452D4970000C79F /* DKRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKRuntime.h; sourceTree = "<group>"; };
+		D650B4122452D4970000C79F /* NSMethodSignature+CrashHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+CrashHandler.m"; sourceTree = "<group>"; };
+		D650B4132452D4970000C79F /* DKRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKRuntime.m; sourceTree = "<group>"; };
+		D650B4142452D4970000C79F /* NSMethodSignature+CrashHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+CrashHandler.h"; sourceTree = "<group>"; };
+		D650B4162452D4970000C79F /* DKCrashObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCrashObject.m; sourceTree = "<group>"; };
+		D650B4172452D4970000C79F /* DKCrashObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCrashObject.h; sourceTree = "<group>"; };
+		D650B4192452D4970000C79F /* NSObject+KVCCrashHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVCCrashHandler.h"; sourceTree = "<group>"; };
+		D650B41A2452D4970000C79F /* NSObject+KVOCrashHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KVOCrashHandler.m"; path = "../KVC/NSObject+KVOCrashHandler.m"; sourceTree = "<group>"; };
+		D650B4242452D4E70000C79F /* NSNotificationCenter+DKCrashHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+DKCrashHandler.h"; sourceTree = "<group>"; };
+		D650B4252452D4E70000C79F /* NSNotificationCenter+DKCrashHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+DKCrashHandler.m"; sourceTree = "<group>"; };
+		D650B4272452D5470000C79F /* DKNotificationRemover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKNotificationRemover.h; sourceTree = "<group>"; };
+		D650B4282452D5470000C79F /* DKNotificationRemover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKNotificationRemover.m; sourceTree = "<group>"; };
+		D650B42A2452D8D60000C79F /* tesmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tesmVC.h; sourceTree = "<group>"; };
+		D650B42B2452D8D60000C79F /* tesmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tesmVC.m; sourceTree = "<group>"; };
+		D650FCE0245135BB00848EA7 /* KVOCrashObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOCrashObject.h; sourceTree = "<group>"; };
+		D650FCE1245135BB00848EA7 /* KVOCrashObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOCrashObject.m; sourceTree = "<group>"; };
 		D68E53FD2431E2BD00630B27 /* dingkanCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dingkanCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68E54002431E2BD00630B27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D68E54012431E2BD00630B27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,6 +88,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6420F46243D687600ED4F2A /* CrashProtector */ = {
+			isa = PBXGroup;
+			children = (
+				D650B42D2452E3E40000C79F /* NSTime */,
+				D650B4232452D4D60000C79F /* Notification */,
+				D650B4152452D4970000C79F /* HandlerCenter */,
+				D650B4182452D4970000C79F /* KVC */,
+				D650B4082452D4970000C79F /* KVO */,
+				D650B40D2452D4970000C79F /* NSArray */,
+				D650B4052452D4970000C79F /* NSObject */,
+				D650B4102452D4970000C79F /* Runtime */,
+			);
+			path = CrashProtector;
+			sourceTree = "<group>";
+		};
+		D650B4052452D4970000C79F /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				D650B4062452D4970000C79F /* NSObject+DKCrashHandler.m */,
+				D650B4072452D4970000C79F /* NSObject+DKCrashHandler.h */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		D650B4082452D4970000C79F /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				D650B40A2452D4970000C79F /* DKKVOProxy.h */,
+				D650B4092452D4970000C79F /* DKKVOProxy.m */,
+				D650B40C2452D4970000C79F /* NSObject+KVOCrashHandler.h */,
+				D650B41A2452D4970000C79F /* NSObject+KVOCrashHandler.m */,
+			);
+			path = KVO;
+			sourceTree = "<group>";
+		};
+		D650B40D2452D4970000C79F /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				D650B40E2452D4970000C79F /* NSArray+DKCrashHandler.m */,
+				D650B40F2452D4970000C79F /* NSArray+DKCrashHandler.h */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		D650B4102452D4970000C79F /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				D650B4112452D4970000C79F /* DKRuntime.h */,
+				D650B4132452D4970000C79F /* DKRuntime.m */,
+				D650B4142452D4970000C79F /* NSMethodSignature+CrashHandler.h */,
+				D650B4122452D4970000C79F /* NSMethodSignature+CrashHandler.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		D650B4152452D4970000C79F /* HandlerCenter */ = {
+			isa = PBXGroup;
+			children = (
+				D650B4162452D4970000C79F /* DKCrashObject.m */,
+				D650B4172452D4970000C79F /* DKCrashObject.h */,
+			);
+			path = HandlerCenter;
+			sourceTree = "<group>";
+		};
+		D650B4182452D4970000C79F /* KVC */ = {
+			isa = PBXGroup;
+			children = (
+				D650B4192452D4970000C79F /* NSObject+KVCCrashHandler.h */,
+				D650B40B2452D4970000C79F /* NSObject+KVCCrashHandler.m */,
+			);
+			path = KVC;
+			sourceTree = "<group>";
+		};
+		D650B4232452D4D60000C79F /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				D650B4242452D4E70000C79F /* NSNotificationCenter+DKCrashHandler.h */,
+				D650B4252452D4E70000C79F /* NSNotificationCenter+DKCrashHandler.m */,
+				D650B4272452D5470000C79F /* DKNotificationRemover.h */,
+				D650B4282452D5470000C79F /* DKNotificationRemover.m */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		D650B42D2452E3E40000C79F /* NSTime */ = {
+			isa = PBXGroup;
+			children = (
+				D647123924554E6C0000BC22 /* DKTimeProxy.h */,
+				D647123A24554E6C0000BC22 /* DKTimeProxy.m */,
+				D647123C24554ED20000BC22 /* NSTimer+DKCrashHandler.h */,
+				D647123D24554ED20000BC22 /* NSTimer+DKCrashHandler.m */,
+			);
+			path = NSTime;
+			sourceTree = "<group>";
+		};
 		D68E53F42431E2BD00630B27 = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +202,19 @@
 		D68E53FF2431E2BD00630B27 /* dingkanCode */ = {
 			isa = PBXGroup;
 			children = (
+				D6420F46243D687600ED4F2A /* CrashProtector */,
 				D68E54002431E2BD00630B27 /* AppDelegate.h */,
 				D68E54012431E2BD00630B27 /* AppDelegate.m */,
 				D68E54032431E2BD00630B27 /* SceneDelegate.h */,
 				D68E54042431E2BD00630B27 /* SceneDelegate.m */,
 				D68E54062431E2BD00630B27 /* ViewController.h */,
 				D68E54072431E2BD00630B27 /* ViewController.m */,
+				D650B42A2452D8D60000C79F /* tesmVC.h */,
+				D650B42B2452D8D60000C79F /* tesmVC.m */,
+				D650FCE0245135BB00848EA7 /* KVOCrashObject.h */,
+				D650FCE1245135BB00848EA7 /* KVOCrashObject.m */,
+				D640E4E6244E82FB00EA234E /* Person.h */,
+				D640E4E7244E82FB00EA234E /* Person.m */,
 				D68E54092431E2BD00630B27 /* Main.storyboard */,
 				D68E540F2431E2BE00630B27 /* Assets.xcassets */,
 				D68E54112431E2BE00630B27 /* LaunchScreen.storyboard */,
@@ -149,11 +295,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D650B41C2452D4970000C79F /* DKKVOProxy.m in Sources */,
+				D650B4202452D4970000C79F /* DKRuntime.m in Sources */,
+				D650B41F2452D4970000C79F /* NSMethodSignature+CrashHandler.m in Sources */,
+				D650B41D2452D4970000C79F /* NSObject+KVCCrashHandler.m in Sources */,
+				D647123E24554ED20000BC22 /* NSTimer+DKCrashHandler.m in Sources */,
+				D650B4262452D4E70000C79F /* NSNotificationCenter+DKCrashHandler.m in Sources */,
+				D650B41B2452D4970000C79F /* NSObject+DKCrashHandler.m in Sources */,
 				D68E54162431E2BE00630B27 /* main.m in Sources */,
 				D68E54082431E2BD00630B27 /* ViewController.m in Sources */,
+				D650B4292452D5470000C79F /* DKNotificationRemover.m in Sources */,
+				D650FCE2245135BB00848EA7 /* KVOCrashObject.m in Sources */,
+				D650B42C2452D8D60000C79F /* tesmVC.m in Sources */,
+				D650B41E2452D4970000C79F /* NSArray+DKCrashHandler.m in Sources */,
+				D650B4222452D4970000C79F /* NSObject+KVOCrashHandler.m in Sources */,
+				D650B4212452D4970000C79F /* DKCrashObject.m in Sources */,
+				D640E4E8244E82FB00EA234E /* Person.m in Sources */,
 				D68E54022431E2BD00630B27 /* AppDelegate.m in Sources */,
+				D647123B24554E6C0000BC22 /* DKTimeProxy.m in Sources */,
 				D68E54052431E2BD00630B27 /* SceneDelegate.m in Sources */,
-				D68E540E2431E2BD00630B27 /* dingkanCode.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,11 +389,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -281,11 +442,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
@@ -295,6 +457,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTGQCB5B3L;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = dingkanCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,6 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dingkan.test.dingkanCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -312,6 +478,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTGQCB5B3L;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = dingkanCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,6 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dingkan.test.dingkanCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
