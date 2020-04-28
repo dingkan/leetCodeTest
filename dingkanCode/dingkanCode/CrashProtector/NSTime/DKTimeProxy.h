@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)trigger:(id)userinfo;
 
+-(instancetype)initWithTarget:(id)target selector:(SEL)aSelector timer:(NSTimer *)timer;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -17,18 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor redColor];
 // 
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(test) name:UIApplicationDidEnterBackgroundNotification object:nil];
 //    
-//    UIButton *tmp = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [tmp setTitle:@"11" forState:UIControlStateNormal];
-//    tmp.frame = CGRectMake(0, 0, 100, 100);
-//    [tmp setTitleColor:UIColor.blueColor forState:UIControlStateNormal];
-//    [tmp addTarget:self action:@selector(didClick) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:tmp];
+    UIButton *tmp = [UIButton buttonWithType:UIButtonTypeSystem];
+    [tmp setTitle:@"11" forState:UIControlStateNormal];
+    tmp.frame = CGRectMake(0, 0, 100, 100);
+    [tmp setTitleColor:UIColor.blueColor forState:UIControlStateNormal];
+    [tmp addTarget:self action:@selector(didClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:tmp];
     
-    self.time = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(run) userInfo:nil repeats:YES];
+    self.time = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(run) userInfo:@"123" repeats:YES];
     [self.time fire];
 }
 

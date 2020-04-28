@@ -176,16 +176,16 @@
     [super viewDidLoad];
     
     
-    dispatch_queue_t queue = dispatch_queue_create("flex", DISPATCH_QUEUE_CONCURRENT);
-    NSMutableArray *tmp = @[].mutableCopy;
-    
-    for (int i = 0; i < 1000; i ++) {
-        dispatch_async(queue, ^{
-//            [tmp addObject:@(i)];
-            [tmp addObject:@"q4"];
-        });
-    }
-    NSLog(@"%lu",tmp.count);
+//    dispatch_queue_t queue = dispatch_queue_create("flex", DISPATCH_QUEUE_CONCURRENT);
+//    NSMutableArray *tmp = @[].mutableCopy;
+//    
+//    for (int i = 0; i < 1000; i ++) {
+//        dispatch_async(queue, ^{
+////            [tmp addObject:@(i)];
+//            [tmp addObject:@"q4"];
+//        });
+//    }
+//    NSLog(@"%lu",tmp.count);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

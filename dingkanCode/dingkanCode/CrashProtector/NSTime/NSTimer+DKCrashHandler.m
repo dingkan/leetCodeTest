@@ -38,27 +38,28 @@ static const void* DKTimeCrashHandlerKey;
     });
 }
 
+
+//实际不做监听，只做分发
 + (NSTimer *)DK_scheduledTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo{
+    
+    
     if (yesOrNo) {
+        NSTimer *timer = nil;
+         
+         DKTimeProxy *proxy = [[DKTimeProxy alloc]initWithTarget:aTarget selector:aSelector timer:timer];
+         
+         timer = [self DK_scheduledTimerWithTimeInterval:ti target:proxy selector:@selector(trigger:) userInfo:userInfo repeats:yesOrNo];;
         
-        NSTimer *time = nil;
-        
-        @autoreleasepool {
-            DKTimeProxy *timeProxy = [[DKTimeProxy alloc]init];
-            timeProxy.aSelector = aSelector;
-            timeProxy.target = aTarget;
-            
-            
-            
-            time.timeProxy = timeProxy;
-            timeProxy.sourceTime = time;
-        }
-        
-        return time;
+            proxy.sourceTime = timer;
+         timer.timeProxy = proxy;
+         
+         return timer;
         
     }else{
         return [self DK_scheduledTimerWithTimeInterval:ti target:aTarget selector:aSelector userInfo:userInfo repeats:yesOrNo];
     }
+    
+
 }
 
 

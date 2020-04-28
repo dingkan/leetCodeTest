@@ -99,22 +99,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E9B1B6F5-58FD-4F0D-86B1-8029F5390E84"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "dingkanCode/CrashProtector/NSTime/DKTimeProxy.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "-trigger:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A7C520AD-5CEE-4ED5-9B75-4A06C33CC896"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -131,16 +115,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "38FBBF90-3A96-4B17-B69B-B80BC4386371"
+            uuid = "D2A546F0-8E19-40D8-9863-5A2BC8C8ED84"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "dingkanCode/CrashProtector/NSTime/NSTimer+DKCrashHandler.m"
+            filePath = "dingkanCode/CrashProtector/NSTime/DKTimeProxy.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "+DK_scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-trigger:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

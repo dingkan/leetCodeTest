@@ -10,24 +10,36 @@
 
 @implementation DKTimeProxy
 
+
+-(instancetype)initWithTarget:(id)target selector:(SEL)aSelector timer:(NSTimer *)timer{
+    if (self = [super init]) {
+        self.target = target;
+        self.aSelector = aSelector;
+        self.sourceTime = timer;
+    }
+    return self;
+}
+
 - (void)trigger:(id)userinfo{
-    id strongTarget = self.target;
     
-    if (strongTarget && [strongTarget respondsToSelector:self.aSelector]) {
+    if (self.target && [self.target respondsToSelector:self.aSelector]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [strongTarget performSelector:self.aSelector withObject:userinfo];
+        [self.target performSelector:self.aSelector withObject:userinfo];
 #pragma clang diagnostic pop
     }else{
-        NSTimer *sourceTime = self.sourceTime;
-        if (sourceTime) {
-            [sourceTime invalidate];
+        
+        NSTimer *timer = self.sourceTime;
+    
+        if (timer) {
+            [timer invalidate];
         }
         
         NSString *reason = [NSString stringWithFormat:@"*****Warning***** logic error target is %@ method is %@, reason : an object dealloc not invalidate Timer.",[self class], NSStringFromSelector(self.aSelector)];
         NSLog(@"%@",reason);
-        
     }
+    
 }
+
 
 @end
