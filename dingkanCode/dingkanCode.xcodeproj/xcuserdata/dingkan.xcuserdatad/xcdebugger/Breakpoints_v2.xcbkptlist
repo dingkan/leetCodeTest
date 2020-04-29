@@ -99,22 +99,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A7C520AD-5CEE-4ED5-9B75-4A06C33CC896"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "dingkanCode/CrashProtector/Runtime/DKRuntime.h"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "DKEXChangeClassMethodInTwoClass(_fromClass, _originSelector, _toClass, _newSelector)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "D2A546F0-8E19-40D8-9863-5A2BC8C8ED84"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

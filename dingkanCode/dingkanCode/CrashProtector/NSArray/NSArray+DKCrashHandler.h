@@ -14,4 +14,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+@interface NSMutableArray (DKCrashHandler)
+
+@end
+
+
+@interface NSDictionary (DKCrashHandler)
+
+@end
+
+
+@interface NSMutableDictionary (DKCrashHandler)
+
+@end
+
+@interface NSCache(DKCrashHandler)
+
+@end
+
 NS_ASSUME_NONNULL_END
