@@ -12,21 +12,28 @@
 @implementation NSArray (DKCrashHandler)
 
 +(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    #ifdef DEBUG
         
-        //越界崩溃方式一：[array objectAtIndex:1000];
-        DKEXChangeImplementations(NSClassFromString(@"__NSArrayI"), @selector(objectAtIndex:), @selector(DK_ObjectAtIndex:));
-        
-        //越界崩溃方式二：arr[1000];   Subscript n:下标、脚注
-        DKEXChangeImplementations(NSClassFromString(@"__NSArrayI"), @selector(objectAtIndexedSubscript:), @selector(DK_objectAtIndexedSubscript:));
-        
-        
-    });
+    #else
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            
+            //越界崩溃方式一：[array objectAtIndex:1000];
+            DKEXChangeImplementations(NSClassFromString(@"__NSArray0"), @selector(objectAtIndex:), @selector(DK_ObjectAtIndex:));
+            
+            //越界崩溃方式二：arr[1000];   Subscript n:下标、脚注
+            DKEXChangeImplementations(NSClassFromString(@"__NSArrayI"), @selector(objectAtIndexedSubscript:), @selector(DK_objectAtIndexedSubscript:));
+            
+            
+        });
+    #endif
+    
+
 }
 
 -(id)DK_ObjectAtIndex:(NSUInteger)index{
-    if (index > self.count - 1) {
+    if (self.count == 0 || (index > self.count - 1)) {
+        NSLog(@"%s call -ObjectAtIndex:", __FUNCTION__);
         return nil;
     }else{
         return [self DK_ObjectAtIndex:index];
@@ -34,7 +41,8 @@
 }
 
 -(id)DK_objectAtIndexedSubscript:(NSUInteger)idx{
-    if (idx > self.count - 1) {
+    if (self.count == 0 || (idx > self.count - 1)) {
+        NSLog(@"%s call -objectAtIndexedSubscript:", __FUNCTION__);
         return nil;
     }else{
         return [self DK_objectAtIndexedSubscript:idx];
@@ -47,28 +55,34 @@
 @implementation NSMutableArray (DKCrashHandler)
 
 +(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    #ifdef DEBUG
         
-        DKEXChangeImplementations([NSMutableArray class], @selector(removeObject:), @selector(DK_removeObject:));
-        
-        DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(addObject:), @selector(DK_addObject:));
-        
-        DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(removeObjectAtIndex:), @selector(DK_removeObjectAtIndex:));
-        
-        DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(insertObject:atIndex:), @selector(DK_insertObject:atIndex:));
-        
-        DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(objectAtIndex:), @selector(DK_objectAtIndex:));
-        
-        DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(objectAtIndexedSubscript:), @selector(DK_objectAtIndexedSubscript:));
-        
-        DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(replaceObjectAtIndex:withObject:), @selector(DK_replaceObjectAtIndex:withObject:));
-    });
+    #else
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            
+            DKEXChangeImplementations([NSMutableArray class], @selector(removeObject:), @selector(DK_removeObject:));
+            
+            DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(addObject:), @selector(DK_addObject:));
+            
+            DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(removeObjectAtIndex:), @selector(DK_removeObjectAtIndex:));
+            
+            DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(insertObject:atIndex:), @selector(DK_insertObject:atIndex:));
+            
+            DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(objectAtIndex:), @selector(DK_objectAtIndex:));
+            
+            DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(objectAtIndexedSubscript:), @selector(DK_objectAtIndexedSubscript:));
+            
+            DKEXChangeImplementations(objc_getClass("__NSArrayM"), @selector(replaceObjectAtIndex:withObject:), @selector(DK_replaceObjectAtIndex:withObject:));
+        });
+    #endif
+
 }
 
 -(void)DK_replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject{
     if (index >= self.count || anObject == nil) {
         
+        NSLog(@"%s call -replaceObjectAtIndex:withObject:", __FUNCTION__);
     }else{
         [self DK_replaceObjectAtIndex:index withObject:anObject];
     }
@@ -76,6 +90,7 @@
 
 -(id)DK_objectAtIndexedSubscript:(NSUInteger)idx{
     if (idx > self.count - 1) {
+        NSLog(@"%s call -objectAtIndexedSubscript:", __FUNCTION__);
         return nil;
     }else{
         return [self DK_objectAtIndexedSubscript:idx];
@@ -83,7 +98,7 @@
 }
 
 -(id)DK_objectAtIndex:(NSUInteger)index{
-    if (self.count == 0 || index >= self.count) {
+    if (self.count == 0 || index > self.count) {
         NSLog(@"%s call -objectAtIndex:", __FUNCTION__);
         return nil;
     }else{
@@ -92,7 +107,7 @@
 }
 
 -(void)DK_insertObject:(id)anObject atIndex:(NSUInteger)index{
-    if (anObject == nil || index >= self.count) {
+    if (anObject == nil || index > self.count) {
         
         NSLog(@"%s call -insertObject:atIndex:", __FUNCTION__);
     }else{
@@ -106,7 +121,7 @@
         return;
     }
     
-    if (index >= self.count) {
+    if (index > self.count) {
         NSLog(@"%s index out of bound", __FUNCTION__);
         return;
     }
@@ -138,10 +153,15 @@
 @implementation NSDictionary (DKCrashHandler)
 
 +(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        DKEXChangeClassMethod([NSDictionary class], @selector(dictionaryWithObjects:forKeys:count:), @selector(DK_dictionaryWithObjects:forKeys:count:));
-    });
+    #ifdef DEBUG
+        
+    #else
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            DKEXChangeClassMethod([NSDictionary class], @selector(dictionaryWithObjects:forKeys:count:), @selector(DK_dictionaryWithObjects:forKeys:count:));
+        });
+    #endif
+
 }
 
 +(instancetype)DK_dictionaryWithObjects:(id  _Nonnull const [])objects forKeys:(id<NSCopying>  _Nonnull const [])keys count:(NSUInteger)cnt{
@@ -161,7 +181,7 @@
         newKeys[index] = keys[i];
         index ++;
     }
-    return [self dictionaryWithObjects:newObjects forKeys:newKeys count:index];
+    return [self DK_dictionaryWithObjects:newObjects forKeys:newKeys count:index];
 }
 
 
@@ -173,14 +193,20 @@
 
 
 +(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        DKEXChangeImplementations(objc_getClass("__NSDictionaryM"), @selector(setObject:forKey:), @selector(DK_setObject:forKey:));
+    #ifdef DEBUG
         
-        DKEXChangeImplementations(objc_getClass("__NSDictionaryM"), @selector(setObject:forKeyedSubscript:), @selector(DK_setObject:forKeyedSubscript:));
-        
-        DKEXChangeImplementations(objc_getClass("__NSDictionaryM"), @selector(removeObjectForKey:), @selector(DK_removeObjectForKey:));
-    });
+    #else
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            DKEXChangeImplementations(objc_getClass("__NSDictionaryM"), @selector(setObject:forKey:), @selector(DK_setObject:forKey:));
+
+            DKEXChangeImplementations(objc_getClass("__NSDictionaryM"), @selector(setObject:forKeyedSubscript:), @selector(DK_setObject:forKeyedSubscript:));
+
+            DKEXChangeImplementations(objc_getClass("__NSDictionaryM"), @selector(removeObjectForKey:), @selector(DK_removeObjectForKey:));
+        });
+    #endif
+    
+
 }
 
 -(void)DK_removeObjectForKey:(id)aKey{
@@ -219,12 +245,18 @@
 
 
 +(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        DKEXChangeImplementations([self class], @selector(setObject:forKey:), @selector(DK_setObject:forKey:));
+    #ifdef DEBUG
         
-        DKEXChangeImplementations([self class], @selector(setObject:forKey:cost:), @selector(DK_setObject:forKey:cost:));
-    });
+    #else
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            DKEXChangeImplementations([self class], @selector(setObject:forKey:), @selector(DK_setObject:forKey:));
+            
+            DKEXChangeImplementations([self class], @selector(setObject:forKey:cost:), @selector(DK_setObject:forKey:cost:));
+        });
+    #endif
+    
+
 }
 
 -(void)DK_setObject:(id)obj forKey:(id)key cost:(NSUInteger)g{

@@ -98,33 +98,7 @@ DKEXChangeClassMethodInTwoClass(Class _fromClass, SEL _originSelector, Class _to
 //       class_swizzleInstanceMethod(class2, originalSEL, replacementSEL);
     
     return DKEXChangeImplementationsInTwoClasses(MFromClass, _originSelector, MToClass, _newSelector);
-    
-    
-//    if (!_fromClass || !_toClass) {
-//        return NO;
-//    }
-//
-//    Method originMethod = class_getClassMethod(_fromClass, _originSelector);
-//    Method newMethod = class_getClassMethod(_toClass, _newSelector);
-//
-//    if (!newMethod) {
-//        return NO;
-//    }
-//
-//    BOOL isAddMethoded = class_addMethod(_fromClass, _originSelector, method_getImplementation(newMethod), method_getTypeEncoding(newMethod));
-//
-//    if (isAddMethoded) {
-//
-//        IMP oriMethodIMP = method_getImplementation(originMethod) ?: imp_implementationWithBlock(^(id selfObject){});
-//        const char* oriMethodTypeEncoding = method_getTypeEncoding(originMethod) ?: "v@:";
-//
-//        class_replaceMethod(_toClass, _newSelector, oriMethodIMP, oriMethodTypeEncoding);
-//
-//    }else{
-//        method_exchangeImplementations(originMethod, newMethod);
-//    }
-//
-//    return YES;
+
 }
 
 

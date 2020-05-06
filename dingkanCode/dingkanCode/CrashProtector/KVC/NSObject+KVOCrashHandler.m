@@ -39,16 +39,21 @@ static void*DKKVODefenderKey = &DKKVODefenderKey;
  */
 
 +(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        DKEXChangeImplementations([NSObject class], @selector(addObserver:forKeyPath:options:context:), @selector(DK_addObserver:forKeyPath:options:context:));
+    #ifdef DEBUG
         
-        DKEXChangeImplementations([NSObject class], @selector(removeObserver:forKeyPath:), @selector(DK_removeObserver:forKeyPath:));
-        
-        DKEXChangeImplementations([NSObject class], @selector(removeObserver:forKeyPath:context:), @selector(DK_removeObserver:forKeyPath:context:));
-        
-        DKEXChangeImplementations([NSObject class], NSSelectorFromString(@"dealloc"), @selector(DK_dealloc));
-    });
+    #else
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            DKEXChangeImplementations([NSObject class], @selector(addObserver:forKeyPath:options:context:), @selector(DK_addObserver:forKeyPath:options:context:));
+            
+            DKEXChangeImplementations([NSObject class], @selector(removeObserver:forKeyPath:), @selector(DK_removeObserver:forKeyPath:));
+            
+            DKEXChangeImplementations([NSObject class], @selector(removeObserver:forKeyPath:context:), @selector(DK_removeObserver:forKeyPath:context:));
+            
+            DKEXChangeImplementations([NSObject class], NSSelectorFromString(@"dealloc"), @selector(DK_dealloc));
+        });
+    #endif
+
 }
 
 -(void)DK_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context{

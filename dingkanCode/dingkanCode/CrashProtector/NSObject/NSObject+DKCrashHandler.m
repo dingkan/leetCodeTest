@@ -12,13 +12,17 @@
 @implementation NSObject (DKCrashHandler)
 
 +(void)load{
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        DKEXChangeImplementations([self class], @selector(forwardingTargetForSelector:), @selector(DK_forwardingTargetForSelector:));
+    #ifdef DEBUG
         
-        DKEXChangeClassMethod([self class], @selector(forwardingTargetForSelector:), @selector(DK_forwardingTargetForSelector:));
-    });
+    #else
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            DKEXChangeImplementations([self class], @selector(forwardingTargetForSelector:), @selector(DK_forwardingTargetForSelector:));
+            
+            DKEXChangeClassMethod([self class], @selector(forwardingTargetForSelector:), @selector(DK_forwardingTargetForSelector:));
+        });
+    #endif
+
 }
 
 + (id)DK_forwardingTargetForSelector:(SEL)aSelector{

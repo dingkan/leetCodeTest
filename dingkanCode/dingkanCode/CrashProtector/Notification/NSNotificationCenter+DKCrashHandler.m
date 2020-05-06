@@ -21,10 +21,15 @@
 static void *DKNotificationRemoverKey = &DKNotificationRemoverKey;
 
 +(void)load{
+#ifdef DEBUG
+    
+#else
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         DKEXChangeImplementations([NSNotificationCenter class], @selector(addObserver:selector:name:object:), @selector(DK_addObserver:selector:name:object:));
     });
+#endif
+
 }
 
 -(void)DK_addObserver:(id)observer selector:(SEL)aSelector name:(NSNotificationName)aName object:(id)anObject{

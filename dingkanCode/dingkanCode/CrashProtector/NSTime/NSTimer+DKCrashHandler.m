@@ -32,10 +32,17 @@ static const void* DKTimeCrashHandlerKey;
 }
 
 +(void)load{
+    
+#ifdef DEBUG
+    
+#else
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         DKEXChangeClassMethod([NSTimer class], @selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:), @selector(DK_scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:));
     });
+#endif
+    
+
 }
 
 

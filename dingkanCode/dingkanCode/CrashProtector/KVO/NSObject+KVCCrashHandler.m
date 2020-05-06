@@ -12,6 +12,9 @@
 @implementation NSObject (KVCCrashHandler)
 
 +(void)load{
+#ifdef DEBUG
+    
+#else
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         DKEXChangeImplementations([NSObject class], @selector(setValue:forKey:), @selector(DK_setValue:forKey:));
@@ -23,6 +26,8 @@
         DKEXChangeImplementations([NSObject class], @selector(valueForUndefinedKey:), @selector(DK_valueForUndefinedKey:));
         
     });
+#endif
+
 }
 
 -(id)DK_valueForUndefinedKey:(NSString *)key{
