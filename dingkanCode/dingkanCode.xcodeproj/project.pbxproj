@@ -29,6 +29,8 @@
 		D68E54102431E2BE00630B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68E540F2431E2BE00630B27 /* Assets.xcassets */; };
 		D68E54132431E2BE00630B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68E54112431E2BE00630B27 /* LaunchScreen.storyboard */; };
 		D68E54162431E2BE00630B27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D68E54152431E2BE00630B27 /* main.m */; };
+		D6C230682465216000670CA5 /* DKWebViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C230672465216000670CA5 /* DKWebViewPool.m */; };
+		D6C2306B24667BA900670CA5 /* WKWebView+Holder.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2306A24667BA900670CA5 /* WKWebView+Holder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,10 @@
 		D68E54122431E2BE00630B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D68E54142431E2BE00630B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D68E54152431E2BE00630B27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D6C230662465216000670CA5 /* DKWebViewPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKWebViewPool.h; sourceTree = "<group>"; };
+		D6C230672465216000670CA5 /* DKWebViewPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKWebViewPool.m; sourceTree = "<group>"; };
+		D6C2306924667BA900670CA5 /* WKWebView+Holder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+Holder.h"; sourceTree = "<group>"; };
+		D6C2306A24667BA900670CA5 /* WKWebView+Holder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+Holder.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +208,7 @@
 		D68E53FF2431E2BD00630B27 /* dingkanCode */ = {
 			isa = PBXGroup;
 			children = (
+				D6C230652465214C00670CA5 /* DKWebViewPool */,
 				D6420F46243D687600ED4F2A /* CrashProtector */,
 				D68E54002431E2BD00630B27 /* AppDelegate.h */,
 				D68E54012431E2BD00630B27 /* AppDelegate.m */,
@@ -223,6 +230,17 @@
 				D68E540C2431E2BD00630B27 /* dingkanCode.xcdatamodeld */,
 			);
 			path = dingkanCode;
+			sourceTree = "<group>";
+		};
+		D6C230652465214C00670CA5 /* DKWebViewPool */ = {
+			isa = PBXGroup;
+			children = (
+				D6C230662465216000670CA5 /* DKWebViewPool.h */,
+				D6C230672465216000670CA5 /* DKWebViewPool.m */,
+				D6C2306924667BA900670CA5 /* WKWebView+Holder.h */,
+				D6C2306A24667BA900670CA5 /* WKWebView+Holder.m */,
+			);
+			path = DKWebViewPool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +317,7 @@
 				D650B4202452D4970000C79F /* DKRuntime.m in Sources */,
 				D650B41F2452D4970000C79F /* NSMethodSignature+CrashHandler.m in Sources */,
 				D650B41D2452D4970000C79F /* NSObject+KVCCrashHandler.m in Sources */,
+				D6C230682465216000670CA5 /* DKWebViewPool.m in Sources */,
 				D647123E24554ED20000BC22 /* NSTimer+DKCrashHandler.m in Sources */,
 				D650B4262452D4E70000C79F /* NSNotificationCenter+DKCrashHandler.m in Sources */,
 				D650B41B2452D4970000C79F /* NSObject+DKCrashHandler.m in Sources */,
@@ -311,6 +330,7 @@
 				D650B4222452D4970000C79F /* NSObject+KVOCrashHandler.m in Sources */,
 				D650B4212452D4970000C79F /* DKCrashObject.m in Sources */,
 				D640E4E8244E82FB00EA234E /* Person.m in Sources */,
+				D6C2306B24667BA900670CA5 /* WKWebView+Holder.m in Sources */,
 				D68E54022431E2BD00630B27 /* AppDelegate.m in Sources */,
 				D647123B24554E6C0000BC22 /* DKTimeProxy.m in Sources */,
 				D68E54052431E2BD00630B27 /* SceneDelegate.m in Sources */,

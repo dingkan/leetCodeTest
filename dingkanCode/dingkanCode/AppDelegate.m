@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "DKWebViewPool.h"
+#import "Person.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) Person *test;
 
 @end
 
@@ -16,7 +20,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.test = [[Person alloc]init];
+    
+    [[DKWebViewPool sharedInstance] dequeueWebViewWithClass:[WKWebView class] webViewHolder:[NSNotificationCenter defaultCenter]];
+    
     return YES;
 }
 

@@ -6,6 +6,7 @@
 #import "KVOCrashObject.h"
 //#import "DKZombieSniffer.h"
 //#import "LXDZombieSniffer.h"
+#import "DKWebViewPool.h"
 
 @interface ViewController ()
 
@@ -42,9 +43,19 @@
     
     [self.view addSubview:btn];
 }
-//-(void)didClick:(UIButton *)btn{
+
+
+-(void)didClick:(UIButton *)btn{
 //    NSLog(@"%@", self.assignObj);
-//}
+    
+    WKWebView *webView = [[DKWebViewPool sharedInstance] dequeueWebViewWithClass:[WKWebView class] webViewHolder:[UIApplication sharedApplication].delegate];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
+    
+    webView.frame = CGRectMake(0, 100, 200, 200);
+    
+    [self.view addSubview:webView];
+    
+}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
